@@ -1,0 +1,25 @@
+Create a self-contained content module that I can paste into the existing index.html page.
+
+Requirements:
+- Return only the module's HTML snippet. Do not return a full HTML document, explanation, or code fences.
+- Put the entire module inside one outer <div class="module">. Place all module content, its <style>, and its <script> inside that div.
+- Give the module a black, slightly transparent background (for example, rgba(0, 0, 0, 0.75)). Do not use opacity on the whole module, because that would also fade its contents.
+- Separate vertically stacked modules with a gap equal to about 30% of the viewport height, with a minimum of 100px and a maximum of 400px. Use CSS equivalent to margin-block-end: clamp(100px, 30vh, 400px). Do not add the trailing gap after the final module if it can be avoided.
+- Make the layout and content responsive and fluid on both mobile phones and laptop screens. Avoid fixed widths and heights that cause overflow; use suitable max-widths, flexible layouts, and mobile breakpoints when needed.
+- Keep all CSS selectors scoped under this module so they do not change the rest of index.html. Do not add global styles or scripts.
+- Keep JavaScript inside this module and scoped to this module's elements. Avoid global variables, global event handlers, and dependencies on other modules.
+- Use semantic, accessible HTML, including appropriate heading levels, descriptive image alt text, and keyboard-accessible controls.
+- Do not assume external libraries or assets are available. If assets are needed, use paths or resources that I provide.
+- Preserve the existing page's content and styles outside this module.
+- The height of each module should be the height of the content plus a 15px margin value both top and bottom (the background should extend 15 pixels out from the content both top and bottom).
+- All content inside the mdoule should be pushed 15px in with padding on the left and right
+
+Module Example:
+<div class="module">
+    
+</div>
+
+Module to create:
+[Describe the module and its content here.]
+
+Read the current module style according to style.css before going foward. Paste the module below:
