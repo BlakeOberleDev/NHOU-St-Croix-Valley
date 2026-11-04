@@ -233,7 +233,8 @@ MODULES
     margin-inline: auto;
     padding: 15px;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0);
+    
     overflow-wrap: anywhere;
 }
 

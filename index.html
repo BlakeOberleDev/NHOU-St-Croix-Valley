@@ -54,5 +54,92 @@
                 <h1>Family Owned<br>Field Tested<br>Future Focused</h1>
             </section>
         </main>
+
+        <div class="module module--before-after">
+            <style>
+                .module--before-after {
+                    width: 100vw;
+                    max-width: none;
+                    margin-inline: calc(50% - 50vw);
+                }
+
+                @font-face {
+                    font-family: "NHOU Eurostile";
+                    src: url("NHOU%20Brand%20Fonts/NHOU%20Brand%20Fonts/EurostileExtended.ttf") format("truetype");
+                    font-style: normal;
+                    font-weight: 400;
+                    font-display: swap;
+                }
+
+                .module--before-after .before-after__title {
+                    margin: 0 0 20px;
+                    color: #e51d35;
+                    font-family: "NHOU Eurostile", Eurostile, sans-serif;
+                    font-size: clamp(1.25rem, 3.5vw, 2.25rem);
+                    line-height: 1.2;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                .module--before-after .before-after__photos {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: clamp(12px, 2.5vw, 28px);
+                    max-width: 1000px;
+                    margin-inline: auto;
+                }
+
+                .module--before-after .before-after__figure {
+                    min-width: 0;
+                    margin: 0;
+                }
+
+                .module--before-after .before-after__label {
+                    margin: 0 0 8px;
+                    color: #fff;
+                    font-family: "NHOU Eurostile", Eurostile, sans-serif;
+                    font-size: clamp(1rem, 2vw, 1.25rem);
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                .module--before-after .before-after__image {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                }
+
+                @media (max-width: 600px) {
+                    .module--before-after .before-after__photos {
+                        grid-template-columns: minmax(0, 1fr);
+                    }
+                }
+            </style>
+
+            <h2 class="before-after__title">AROUND HERE, WE TAKE CARE OF OUT OWN</h2>
+
+            <div class="before-after__photos">
+                <figure class="before-after__figure">
+                    <figcaption class="before-after__label">Before</figcaption>
+                    <img
+                        class="before-after__image"
+                        src="moduleCreation/before.jpeg"
+                        alt="Underside of a vehicle before rust protection treatment"
+                        loading="lazy"
+                    >
+                </figure>
+
+                <figure class="before-after__figure">
+                    <figcaption class="before-after__label">After</figcaption>
+                    <img
+                        class="before-after__image"
+                        src="moduleCreation/after.jpeg"
+                        alt="Underside of a vehicle after rust protection treatment"
+                        loading="lazy"
+                    >
+                </figure>
+            </div>
+        </div>
     </body>
 </html>
