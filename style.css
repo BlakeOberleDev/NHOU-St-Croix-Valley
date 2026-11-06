@@ -179,7 +179,7 @@ END SETUP
     z-index: 0;
     inset: clamp(190px, 30vh, 300px) max(1rem, calc((100vw - 1180px) / 2)) clamp(1rem, 3vw, 2rem);
     border-radius: 14px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url("Photo Tests/somephotosnhou/USETHISE.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url("./Photo Tests/somephotosnhou/USETHISE.jpeg");
     background-position: center;
     background-size: cover;
     content: "";
