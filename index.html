@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-version="4">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NHOU St. Croix Valley</title>
         <link rel="icon" href="src/img/NHOU_LOGO_STCROIX.webp" type="image/webp">
         <link rel="stylesheet" href="style.css">
-        <script>
-            let input = prompt("Please enter a Developer code (Leave empty or close this dialouge box if you are a user)")
-
-            switch(input){
-                case "scrolling_examples":
-                    window.location.href = "./scrolling tests/index.html";
-                    break
-                case "background_video":
-                    window.location.href = "./backgroundVideo.html"
-                    break
-            }
+        <link rel="stylesheet" href="style2.css">
+        <script defer>
+            document.addEventListener("DOMContentLoaded", () => {
+                const video = document.getElementById('background-video');
+                if (video) video.playbackRate = 0.75;
+            });
         </script>
     </head>
 
     <body>
+
+        <div class="video-stage" aria-hidden="true">
+            <video id="background-video" class="background-video" autoplay muted loop playsinline tabindex="-1" poster="../src/img/trucks.jpg">
+                <source src="../video.mp4" type="video/mp4">
+            </video>
+        </div>
+
         <header class="site-header">
             <div class="brand-row">
                 <a class="brand" href="index.html" aria-label="NHOU St. Croix Valley home">
@@ -42,104 +44,137 @@
             </div>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html" aria-current="page">Home</a>
-                <a href="#services">NHOU Services</a>
-                <a href="#about">About Us</a>
-                <a href="faqTest.html">FAQ</a>
-                <a href="mailto:info@nhoustcroixvalley.com">Contact</a>
+                <a href="services.html">NHOU Services</a>
+                <a href="aboutUs.html">About Us</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </header>
 
         <main>
             <section class="hero" aria-label="NHOU St. Croix Valley rust protection">
-                <h1>Family Owned<br>Field Tested<br>Future Focused</h1>
+                <h1><span>Family Owned</span><span>Field Tested</span><span>Future Focused</span></h1>
+            </section>
+
+            <section class="module intro">
+                <div class="module-inner">
+                    <p class="eyebrow">NHOU St. Croix Valley</p>
+                    <h1>Around here,<br>we take care of our own.</h1>
+                    <p>Road salt is part of life. Give your vehicle another line of defense with professional rust prevention made for the way we drive.</p>
+                </div>
+            </section>
+
+            <section class="video-break" aria-label="Video break">
+                <p>Protection that goes the distance.</p>
+            </section>
+
+            <section class="module">
+                <div class="module-inner content-grid">
+                    <div>
+                        <p class="eyebrow">See the difference</p>
+                        <h2>Before and after</h2>
+                        <p>A careful application helps protect exposed metal and hard-to-reach areas from moisture, salt, and seasonal road grime.</p>
+                    </div>
+                    <div class="photo-pair">
+                        <figure>
+                            <img src="../src/img/before.jpeg" alt="Vehicle undercarriage before rust-prevention treatment">
+                            <figcaption>Before treatment</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../src/img/after.jpeg" alt="Vehicle undercarriage after rust-prevention treatment">
+                            <figcaption>After treatment</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-break" aria-label="Video break">
+                <p>Built for the roads we call home.</p>
+            </section>
+
+            <section class="module">
+                <div class="module-inner content-grid">
+                    <div>
+                        <p class="eyebrow">Rust prevention, explained</p>
+                        <h2>Why protect your undercarriage?</h2>
+                        <p>Water and road salt collect beneath your vehicle, where corrosion can quietly take hold. An oil-based protectant creeps into seams and cavities, displaces moisture, and helps shield vulnerable metal through every season.</p>
+                        <p>Annual inspections make it easier to spot wear early and keep your protection working as intended.</p>
+                    </div>
+                    <img class="feature-photo" src="Photo Tests/WhyProtect.jpeg" alt="Truck ready for winter road conditions">
+                </div>
+                <div class="module-inner quick-faq">
+                    <p class="eyebrow">Common questions</p>
+                    <details>
+                        <summary>Why choose NHOU St. Croix Valley?</summary>
+                        <div class="quick-faq-answer">
+                            <p><strong>We're part of NHOU, not just a local applicator.</strong> Customer feedback and lessons from applying NHOU products year after year help improve the formulas, application methods, and customer experience.</p>
+                            <p><strong>We're family-owned and locally rooted.</strong> Our customers are our neighbors and friends, and we take pride in every job.</p>
+                            <p><strong>We take time to get to know you and your vehicle.</strong> Rust protection isn't one-size-fits-all. We'll help you choose services that fit your vehicle, protection goals, and budget.</p>
+                            <p><strong>NHOU has built a loyal following worldwide.</strong> We share practical rust-protection information backed by years of real-world experience and work to improve every year.</p>
+                            <p><strong>We do it right.</strong> We prep the vehicle, choose the right formulas, reach deep inside the frame, treat hidden cavities and inner panels, and protect vulnerable areas under the hood—not just the parts you can see.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What is creep, and why are NHOU products effective over existing rust?</summary>
+                        <div class="quick-faq-answer">
+                            <p><strong>Creep</strong> is a product's ability to move across metal after application. Like a drop of oil spreading across paper, it helps the product travel beyond where it was sprayed and reach seams, folds, and other hard-to-access areas.</p>
+                            <p><strong>Wicking ability</strong> describes how NH Oil, while soft and active, can migrate into surface rust, displace moisture, and block oxygen from reaching the metal. This movement is especially important on rustier vehicles. Softer products offer more creep and self-healing; harder, more durable coatings move less once applied and depend more on complete initial coverage. We assess each vehicle to match the product to its condition.</p>
+                        </div>
+                    </details>
+                    <a class="contact-link" href="faq.html">Still got questions?</a>
+                </div>
+            </section>
+
+            <section class="video-break" aria-label="Video break">
+                <p>Protection that goes the distance.</p>
+            </section>
+
+            <section class="module">
+                <div class="module-inner content-grid">
+                    <div>
+                        <p class="eyebrow">Long-term protection</p>
+                        <h2>Meet Boss Wax Hybrid.</h2>
+                        <p>For vehicles with little to no rust, Boss Wax Hybrid cures into a durable, semi-permanent protective coating. Clear NH Oil is also applied to cavities for added coverage.</p>
+                        <p>It includes a lifetime transferable warranty, with required cavity-oil service and inspection every two years.</p>
+                        <a class="contact-link" href="services.html">Explore Boss Wax Hybrid</a>
+                    </div>
+                    <img class="feature-photo warranty-photo" src="src/img/warranty-overview.webp" alt="NHOU nationwide lifetime transferable warranty for rust protection">
+                </div>
+            </section>
+
+            <section class="video-break" aria-label="Video break">
+                <p>A little prevention goes a long way.</p>
+            </section>
+
+            <section class="module">
+                <div class="module-inner">
+                    <p class="eyebrow">Don't just take our word for it</p>
+                    <h2>Check out our Reviews</h2>
+                    <div class="review-list">
+                        <blockquote>
+                            <p>“The whole team was very responsive and provided all around great service. I would recommend NHOU St. Croix Valley to anyone looking to get their vehicle undercoated.”</p>
+                            <cite>Amanda</cite>
+                        </blockquote>
+                        <blockquote>
+                            <p>“Overall wonderful people that show a lot of pride in what they do. I plan on returning every August, with whatever my fleet may contain at the time.”</p>
+                            <cite>Scott</cite>
+                        </blockquote>
+                        <a class="contact-link review-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/NHOU+St.+Croix+Valley+Rust+Proofing+%26+Undercoating/@45.4033074,-92.625709,17z/data=!4m8!3m7!1s0x23f0cd1d31a7ec5d:0xe92fe2e151400ae!8m2!3d45.4033074!4d-92.625709!9m1!1b1!16s%2Fg%2F11kq3s8_pc?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D">Check out our other reviews</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-break" aria-label="Video break">
+                <p>Protection that goes the distance.</p>
+            </section>
+
+            <section class="module closing">
+                <div class="module-inner">
+                    <p class="eyebrow">Ready when you are</p>
+                    <h2>Keep your vehicle ready for the next season.</h2>
+                    <a class="contact-link" href="tel:+17154941795">Call 715-494-1795</a>
+                </div>
             </section>
         </main>
-
-        <div class="module module--before-after">
-            <style>
-                .module--before-after {
-                    width: 100vw;
-                    max-width: none;
-                    margin-inline: calc(50% - 50vw);
-                }
-
-                @font-face {
-                    font-family: "NHOU Eurostile";
-                    src: url("NHOU%20Brand%20Fonts/NHOU%20Brand%20Fonts/EurostileExtended.ttf") format("truetype");
-                    font-style: normal;
-                    font-weight: 400;
-                    font-display: swap;
-                }
-
-                .module--before-after .before-after__title {
-                    margin: 0 0 20px;
-                    color: #e51d35;
-                    font-family: "NHOU Eurostile", Eurostile, sans-serif;
-                    font-size: clamp(1.25rem, 3.5vw, 2.25rem);
-                    line-height: 1.2;
-                    text-align: center;
-                    text-transform: uppercase;
-                }
-
-                .module--before-after .before-after__photos {
-                    display: grid;
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
-                    gap: clamp(12px, 2.5vw, 28px);
-                    max-width: 1000px;
-                    margin-inline: auto;
-                }
-
-                .module--before-after .before-after__figure {
-                    min-width: 0;
-                    margin: 0;
-                }
-
-                .module--before-after .before-after__label {
-                    margin: 0 0 8px;
-                    color: #fff;
-                    font-family: "NHOU Eurostile", Eurostile, sans-serif;
-                    font-size: clamp(1rem, 2vw, 1.25rem);
-                    text-align: center;
-                    text-transform: uppercase;
-                }
-
-                .module--before-after .before-after__image {
-                    display: block;
-                    width: 100%;
-                    height: auto;
-                    border: 1px solid rgba(255, 255, 255, 0.25);
-                }
-
-                @media (max-width: 600px) {
-                    .module--before-after .before-after__photos {
-                        grid-template-columns: minmax(0, 1fr);
-                    }
-                }
-            </style>
-
-            <h2 class="before-after__title">AROUND HERE, WE TAKE CARE OF OUT OWN</h2>
-
-            <div class="before-after__photos">
-                <figure class="before-after__figure">
-                    <figcaption class="before-after__label">Before</figcaption>
-                    <img
-                        class="before-after__image"
-                        src="moduleCreation/before.jpeg"
-                        alt="Underside of a vehicle before rust protection treatment"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="before-after__figure">
-                    <figcaption class="before-after__label">After</figcaption>
-                    <img
-                        class="before-after__image"
-                        src="moduleCreation/after.jpeg"
-                        alt="Underside of a vehicle after rust protection treatment"
-                        loading="lazy"
-                    >
-                </figure>
-            </div>
-        </div>
     </body>
 </html>
